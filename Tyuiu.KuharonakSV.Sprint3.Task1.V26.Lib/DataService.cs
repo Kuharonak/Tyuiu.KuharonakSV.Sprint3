@@ -5,7 +5,7 @@ namespace Tyuiu.KuharonakSV.Sprint3.Task1.V26.Lib
     {
         public double GetSumSeries(int value, int startValue, int stopValue)
         {
-            double multseries = 1;
+            double multseries = 1.0;
             while (startValue <= stopValue)
             { 
                 multseries  = multseries + (Math.Pow(6/Math.Pow(value, startValue), 2));
