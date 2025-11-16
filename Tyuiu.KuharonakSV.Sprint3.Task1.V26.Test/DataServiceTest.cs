@@ -1,11 +1,19 @@
-﻿namespace Tyuiu.KuharonakSV.Sprint3.Task1.V26.Test
+﻿using Tyuiu.KuharonakSV.Sprint3.Task1.V26.Lib;
+namespace Tyuiu.KuharonakSV.Sprint3.Task1.V26.Test
 {
     [TestClass]
-    public sealed class Test1
+    public sealed class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidGetSumSeries()
         {
+            DataService ds = new DataService();
+            int value = 5;
+            int startValue = 1;
+            int stopValue = 8;
+            double res = ds.GetSumSeries(value, startValue, stopValue);
+            double wait = 1.5;
+            Assert.AreEqual(res, wait);
         }
     }
 }
