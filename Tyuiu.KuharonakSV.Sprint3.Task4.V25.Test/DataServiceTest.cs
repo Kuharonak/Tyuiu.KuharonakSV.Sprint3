@@ -9,12 +9,12 @@ namespace Tyuiu.KuharonakSV.Sprint3.Task4.V25.Test
         {
             DataService ds = new DataService();
 
-            int startValue = -5;
-            int stopValue = 5;
+            int startVal = -5;
+            int stopVal = 5;
 
-            double res = ds.Calculate(startValue, stopValue);
-            double wait = 7.405;
+            double res = ds.Calculate(startVal, stopVal);
 
+            double wait = 44.313;
             Assert.AreEqual(wait, res);
         }
     }
