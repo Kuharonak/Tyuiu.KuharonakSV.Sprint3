@@ -5,14 +5,14 @@ namespace Tyuiu.KuharonakSV.Sprint3.Task4.V25.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidCalculate()
         {
             DataService ds = new DataService();
 
-            int startVal = -5;
-            int stopVal = 5;
+            int startValue = -5;
+            int stopValue = 5;
 
-            double res = ds.Calculate(startVal, stopVal);
+            double res = ds.Calculate(startValue, stopValue);
 
             double wait = 44.313;
             Assert.AreEqual(wait, res);
