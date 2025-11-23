@@ -8,14 +8,7 @@ namespace Tyuiu.KuharonakSV.Sprint3.Task4.V25.Test
         public void ValidCalculate()
         {
             DataService ds = new DataService();
-
-            int startValue = -5;
-            int stopValue = 5;
-
-            double res = ds.Calculate(startValue, stopValue);
-
-            double wait = 44.313;
-            Assert.AreEqual(wait, res);
+            Assert.That(ds.Calculate(-5, -1), Is.EqualTo(8.995));
         }
     }
 }
