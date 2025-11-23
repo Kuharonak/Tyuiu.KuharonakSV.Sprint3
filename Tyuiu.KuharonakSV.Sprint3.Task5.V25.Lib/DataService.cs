@@ -6,9 +6,10 @@ namespace Tyuiu.KuharonakSV.Sprint3.Task5.V25.Lib
         public double GetSumSumSeries(int x, int startValue1, int startValue2, int stopValue1, int stopValue2)
         {
             double sumSeries = 0;
+            
             for (int i = startValue1; i <= stopValue1; i++)
             {
-                for (int j = startValue2; j <= startValue2; j++)
+                for (int j = startValue2; j <= stopValue2; j++)
                 {
                     sumSeries += (Math.Pow(x, j) + Math.Cos(j));
                 }
@@ -17,3 +18,4 @@ namespace Tyuiu.KuharonakSV.Sprint3.Task5.V25.Lib
         }
     }
 }
+
