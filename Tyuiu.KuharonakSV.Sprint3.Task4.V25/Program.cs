@@ -15,19 +15,24 @@ internal class Program
         Console.WriteLine("* Выполнил: Кухаронак С В | СМАРТБ-25-1                                   *");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
         Console.WriteLine("* На отрезке, где x принимает значения от -5 до 5, вычислить значение     *");
-        Console.WriteLine("* функции y=x/(cos(x)-sin(x)) При х = 0 пропустить значение. Полученные   *");
+        Console.WriteLine("* функции y=x/(cos(x)-sin(x)). При х = 0 пропустить значение. Полученные  *");
         Console.WriteLine("* значения суммировать.                                                   *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
-        Console.WriteLine("Введите x: ");
-        int start = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Введите y: ");
-        int stop = Convert.ToInt32(Console.ReadLine());
+
+        int startValue = -5;
+        int stopValue = 5;
+
+        Console.WriteLine(" Старт шага = " + startValue);
+        Console.WriteLine(" Конец шага = " + stopValue);
+
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-        Console.WriteLine(ds.Calculate(start, stop));
+
+        Console.WriteLine(" Сумма ряда = " + ds.Calculate(startValue, stopValue));
+
         Console.ReadKey();
     }
 }

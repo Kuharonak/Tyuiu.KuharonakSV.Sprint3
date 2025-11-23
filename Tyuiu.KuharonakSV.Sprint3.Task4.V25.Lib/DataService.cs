@@ -6,31 +6,18 @@ namespace Tyuiu.KuharonakSV.Sprint3.Task4.V25.Lib
         public double Calculate(int startValue, int stopValue)
         {
             double res = 0;
-            if ((startValue >= -5) && (stopValue <= 5))
+            for (int x = startValue; x <= startValue; x++)
             {
-                for (double i = startValue; i <= stopValue; i++)
+                if (x == 0)
                 {
-                    if (i == 0)
-                    {
-                        continue;
-                    }
-                    else
-                    {
-                        res += i / (Math.Cos(i) - Math.Sin(i));
-                    }
-
-                }
-                if (startValue == -5 && stopValue == 5)
-                {
-                    return 8.995d;
+                    continue;
                 }
                 else
                 {
-                    return Math.Round(res, 3);
+                    res = res + (x / (Math.Cos(x) - Math.Sin(x)));
                 }
-
             }
-            return 0;
+            return Math.Round(res, 3);
         }
     }
 }
