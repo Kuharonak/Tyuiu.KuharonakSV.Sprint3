@@ -10,7 +10,8 @@ namespace Tyuiu.KuharonakSV.Sprint3.Task7.V5.Test
             DataService ds = new DataService();
             int startValue = -5;
             int stopValue = 5;
-            double[] valueWaitArray = new double[stopValue - startValue + 1];
+            int len = stopValue - startValue + 1;
+            double[] valueWaitArray = new double[len];
             valueWaitArray[0] = 70.14;
             valueWaitArray[1] = 55.21;
             valueWaitArray[2] = 41.05;
@@ -22,7 +23,9 @@ namespace Tyuiu.KuharonakSV.Sprint3.Task7.V5.Test
             valueWaitArray[8] = -42.96;
             valueWaitArray[9] = -56.77;
             valueWaitArray[10] = -69.83;
-            CollectionAssert.AreEqual(ds.GetMassFunction(startValue, stopValue), valueWaitArray);
+            double[] res = new double[len];
+            res = ds.GetMassFunction(startValue, stopValue);
+            CollectionAssert.AreEqual(valueWaitArray, res);
         }
     }
 }

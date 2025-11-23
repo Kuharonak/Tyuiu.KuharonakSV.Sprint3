@@ -1,4 +1,5 @@
-﻿using Tyuiu.KuharonakSV.Sprint3.Task7.V5.Lib;
+﻿using System.ComponentModel.DataAnnotations;
+using Tyuiu.KuharonakSV.Sprint3.Task7.V5.Lib;
 internal class Program
 {
     private static void Main(string[] args)
@@ -25,8 +26,8 @@ internal class Program
         int stopValue = 5;
         Console.WriteLine("Старт шага = " + startValue);
         Console.WriteLine("Конец шага = " + stopValue);
-
-        double[] valueArray = new double[stopValue - startValue + 1];
+        int len = ds.GetMassFunction(startValue, stopValue).Length;
+        double[] valueArray = new double[len];
         valueArray = ds.GetMassFunction(startValue, stopValue);
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");

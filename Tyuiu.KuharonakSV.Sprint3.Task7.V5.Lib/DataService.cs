@@ -5,7 +5,8 @@ namespace Tyuiu.KuharonakSV.Sprint3.Task7.V5.Lib
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
-            double[] valueArray = new double[stopValue - startValue + 1];
+            int len = stopValue - startValue + 1;
+            double[] valueArray = new double[len];
             double y;
             int count = 0;
             for (int x = startValue; x <= stopValue; x++)
